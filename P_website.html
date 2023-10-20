@@ -19,6 +19,12 @@
             text-align: center;
         }
 
+        h4
+        {
+            color: blueviolet; 
+            text-indent: 1em;
+        }
+
         body
         {
             background-image: url(proj.jpg);
@@ -32,30 +38,19 @@
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             color: rgb(43, 48, 148);
             font-size: large;
+            text-align: center;
 
         }
 
-        #p0 
+        ol 
         { 
-            padding: 8px;
-            margin: 10px;
-  
-            background-color: #fda8f8;
-            border-radius: 8px;
-            color: black;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: medium;
-        }
-
-        #p1 
-        { 
-            padding: 8px;
+            padding: 18px;
             margin: 10px;
   
             background-color: #57e6f6;
             border-radius: 8px;
             color: black;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: Arial, Helvetica, sans-serif;
             font-size: medium;
         }
 
@@ -67,11 +62,11 @@
             background-color: #afff92;
             border-radius: 8px;
             color: black;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: Arial, Helvetica, sans-serif;
             font-size: medium;
         }
 
-        #p3 
+        #p2 
         { 
             padding: 8px;
             margin: 10px;
@@ -83,7 +78,42 @@
             font-size: medium;
         }
 
+        
+        #form1{
+
+            margin: 10px;
+  
+            border-radius: 8px;
+            color: black;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: medium;
+        }
+
+        table,tr,th,td
+        {
+            border: 1px solid;
+            border-collapse: collapse;
+
+            padding: 8px;
+            margin: 10px;
+  
+            background-color: #fda8f8;
+            border-radius: 3px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+        }
+
     </style>
+
+    <script>
+
+        function display(form) {
+        var message = form.msg.value;
+        alert("You typed: " + message);
+        }
+
+    </script>
 
 
 </head>
@@ -95,31 +125,59 @@
 
     
  <pre> 
-    Age: 20                                        HighSchool: Bolingbrook High                 Hobbies: Games, Sleep           
-    Birthday: 10/19/2002           College: Bradley University                       Favorite Food: Tacos                 
-    Siblings: 1 brother                   Major: CIS
-    Pets: 1 dog
-
+    Age: 21                                        HighSchool: Bolingbrook High                 Hobbies: Games, Sleep     Siblings: 1 brother      
+     Birthday: 10/19/2002           College: Bradley University                       Favorite Food: Tacos                Pets: 1 dog                
+     
+     Major: CIS  
  </pre>
 
     <h1>Reflection</h1>
 
-    <p id="p0">Hi
+    <p> 
+        <table style="width: auto;">
+            <tr>
+            <th rowspan="4">Learning</th>
+            <td>I learned about many different programming langugages</td>
+            </tr>
+
+            <tr><td>I learned about useful algorithms such as binary search</td></tr>
+            <tr><td>I learned what Front-End and Back-End development is</td></tr>
+            <tr><td>I learned about some of the systems used in these developments</td></tr>
+        </table>
+
+        <table style="width: auto;">
+            <tr>
+            <th rowspan="4">Life Goals</th>
+            <td>To find out what the job I truly want is</td>
+            </tr>
+
+            <tr><td>To earn a stable income</td></tr>
+            <tr><td>To overcome the job interview process</td></tr>
+            <tr><td>To be able to go to new places with my friends</td></tr>
+        </table>
+
 
 
     </p>
     
     
     <h1>Achievements</h1>
+    
+    <h4>Things I'm proud of</h4>
+    <ol>
 
-    <p id="p1">Hi
+        <li>Made a cash register program using Java my freshman year</li>
+        <li>Got to make a mini block-chain using C++ my sophomore year</li>
+        <li>Straight A's my entire freshman year</li>
+        <li>Got an A in my speech class (from someone who hates public speaking)</li>
 
 
-    </p>
+
+    </ol>
 
     <h1>Qualifications</h1>
 
-    <h4 style="color: blueviolet; text-indent: 1em;">Academics</h4>
+    <h4>Academics</h4>
         
         <ul>
             <li>Dean's List</li>
@@ -127,7 +185,7 @@
             <li>3.9 GPA</li>
         </ul>
     
-        <h4 style="color: blueviolet; text-indent: 1em;">Professional</h4>
+        <h4>Professional</h4>
         <ul>
             <li>Worked with langugages such as Java, Javascript, C++, Python, and HTML/CSS </li>
             <li>Worked with systems such as Linux and MySQL</li>
@@ -137,7 +195,19 @@
 
     <h1>How to contact me</h1>
 
-    <p id="p3"><a href="mailto:mjimenez@bradley.edu">Send Email</a></p>
+    <p id="p2"><a href="mailto:mjimenez@bradley.edu">Send Email</a></p>
+    
+    
+        <form id="form1" action="" method="GET">
+            <p>Have feedback for the website?</p>
+            <input type="text" name="msg" placeholder="Type feedback here">
+            <button onclick="display(this.form)">Send</button>
+        </form>
+    
+    
+    
+    
+    
 
 
 
